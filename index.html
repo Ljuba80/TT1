@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing data products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing data products">
+  <meta name="author" content="ljuba80">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing data products</h1>
+    <h2>mtcars dataset</h2>
+    <p>ljuba80<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>mtcars dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>mpg     - Miles/(US) gallon</li>
+<li>cyl     - Number of cylinders</li>
+<li>  disp    - Displacement (cu.in.)</li>
+<li>hp      - Gross horsepower</li>
+<li>drat  - Rear axle ratio</li>
+<li>wt      - Weight (lb/1000)</li>
+<li>qsec  - 1/4 mile time</li>
+<li>vs      - V/S</li>
+<li>am      - Transmission (0 = automatic, 1 = manual)</li>
+<li>gear  - Number of forward gears</li>
+<li>carb  - Number of carburetors</li>
+</ul>
+
+<p>Is there correlation between consumption (mpg) and Transmission type?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Analysis</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>First step is analysis of mpg ~ am variable</p></li>
+<li><p>Analysis showed that average value for mpg is17.1473684<br>
+when transmission type is  automatic and 24.3923077 for manual transmission</p></li>
+<li><p>Results shows that, in average, cars with manual transmission type have smaller consumption (higher mpg value) than cars with automatic consumption</p></li>
+<li><p>Hypothesis analysis confirmed previous results. With 95% probability we can state that difference between average mpg for cars with automatic and manual transmission will be between -11.2801944 and -3.2096842</p></li>
+<li><p>As interval doesn&#39;t contain zero value, we reject hypothesis that average consumption for two types of care is the same.</p></li>
+<li><p>Interval sign tells that manual transmission cars  have higher mpg value (lesser consumption)</p></li>
+<li><p>However, this is fairy simple one dimensional model </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <ul>
+<li><p>Box plots can give initial insight of data dependency</p></li>
+<li><p>We see that average value  of consumption is higher (mpg is lower) for cars with automatic transmission</p></li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Presentation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>For presentation go  to shinyapps.io <a href="http://ljuba80.shinyapps.io/mtcars">(mtcars presentation)</a></p></li>
+</ul>
+
+<h2>- This presentation contains reports based from simple analysis mpg ~ single variable</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='mtcars dataset'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Analysis'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Presentation'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
